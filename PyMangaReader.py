@@ -64,7 +64,8 @@ idiomas = {
 class LectorManga:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("PyManReader - Beta 0.2")
+        self.root.title("PyManReader - Beta 0.3")
+        self.root.state('zoomed')  # Maximiza la ventana
         self.label = tk.Label(self.root, text="Seleccione un archivo CBR, ZIP, RAR o PDF:")
         self.label.pack()
         self.entry = tk.Entry(self.root)
@@ -103,8 +104,6 @@ class LectorManga:
         self.root.bind("<Left>", lambda event: self.pagina_anterior())
         self.root.bind("<Up>", lambda event: self.acercar())
         self.root.bind("<Down>", lambda event: self.alejar())
-        self.root.bind("<w>", lambda event: self.desplazar_arriba())
-        self.root.bind("<s>", lambda event: self.desplazar_abajo())
         self.root.bind("<r>", lambda event: self.redimensionar_imagen())
         # Eventos de la rueda del mouse
         self.root.bind("<MouseWheel>", self.zoom_con_rueda)
@@ -202,18 +201,8 @@ class LectorManga:
             self.current_image_index = len(self.image_files) - 1
         self.cargar_imagen()
 
-    # Función para desplazarse hacia arriba
-    def desplazar_arriba(self):
-        self.scroll_factor -= 0.1
-        self.image_frame.yview_scroll(int(-1*self.scroll_factor), "units")
-
-    # Función para desplazarse hacia abajo
-    def desplazar_abajo(self):
-        self.scroll_factor += 0.1
-        self.image_frame.yview_scroll(int(self.scroll_factor), "units")
-
     # Función para redimensionar la imagen
-    def redimensionar_imagen(self):
+    def redimensionar_imagen(self)
         self.zoom_factor = 1.0
         self.cargar_imagen()
 
