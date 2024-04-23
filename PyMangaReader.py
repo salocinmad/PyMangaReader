@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, colorchooser, OptionMenu
 import zipfile
-import rarfile
+import rarfile 
 import os
 from PIL import Image, ImageTk
 from pdf2image import convert_from_path
@@ -64,8 +64,8 @@ idiomas = {
 class LectorManga:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Lector de Manga")
-        self.label = tk.Label(self.root, text="Seleccione un archivo ZIP, CBR o PDF:")
+        self.root.title("PyManReader - Beta 0.2")
+        self.label = tk.Label(self.root, text="Seleccione un archivo CBR, ZIP, RAR o PDF:")
         self.label.pack()
         self.entry = tk.Entry(self.root)
         self.entry.pack()
