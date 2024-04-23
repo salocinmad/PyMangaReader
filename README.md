@@ -4,8 +4,8 @@ Lector de manga básico en python, con interfaz gráfica y algunas opciones inte
 Accesos directos 
  Flecha arriba - zoom in (tambien con el scroll del raton)\
  Flecha abajo - zoom out (tambien con el scroll del raton)\
- Flecha izquierda - imagen anterior
- Flecha derecha - imagen siguiente
+ Flecha izquierda - imagen anterior\
+ Flecha derecha - imagen siguiente\
  R - Redimensionar al tamaño actual de la ventana
 
 · En la carpeta donde queiras guardar tu proyecto:
