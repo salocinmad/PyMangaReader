@@ -202,7 +202,7 @@ class LectorManga:
         self.cargar_imagen()
 
     # Función para redimensionar la imagen
-    def redimensionar_imagen(self)
+    def redimensionar_imagen(self):
         self.zoom_factor = 1.0
         self.cargar_imagen()
 
