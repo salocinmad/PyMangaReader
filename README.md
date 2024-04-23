@@ -2,17 +2,21 @@
 Lector de manga básico en python, con interfaz gráfica y algunas opciones interesantes.
 
 Accesos directos 
- Flecha arriba - zoom in (tambien con el scroll del raton)
- Flecha abajo - zoom out (tambien con el scroll del raton)
- Flecha izquierda - imagen anterior
- Flecha derecha - imagen siguiente
- R - Redimensionar al tamaño actual de la ventana
+ Flecha arriba - zoom in (tambien con el scroll del raton)\
+ Flecha abajo - zoom out (tambien con el scroll del raton)\
+ Flecha izquierda - imagen anterior\
+ Flecha derecha - imagen siguiente\
+ R - Redimensionar al tamaño actual de la ventana\
 
 · En la carpeta donde queiras guardar tu proyecto:
+```bash
 git clone https://github.com/salocinmad/PyMangaReader
+```
 
 · Creamos un entorno virtual en el sistema
+```bash
 python -m venv venv
+```
 
 Para crear un entorno virtual en Python, puedes usar el módulo `venv` que viene incorporado en Python 3.3 y versiones posteriores. Aquí están los pasos para crear un entorno virtual llamado `venv`:
 
