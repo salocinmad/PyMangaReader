@@ -66,13 +66,17 @@ class LectorManga:
         self.root = tk.Tk()
         self.root.title("PyManReader - Beta 0.3")
         self.root.state('zoomed')  # Maximiza la ventana
-        self.label = tk.Label(self.root, text="Seleccione un archivo CBR, ZIP, RAR o PDF:")
-        self.label.pack()
+        # Crear un nuevo marco para la etiqueta y el botón de búsqueda
+        self.search_frame = tk.Frame(self.root)
+        self.search_frame.pack()
+        self.label = tk.Label(self.search_frame, text="Seleccione un archivo CBR, ZIP, RAR o PDF:")
+        self.label.pack(side=tk.LEFT)
         self.entry = tk.Entry(self.root)
         self.entry.pack()
+        self.button = tk.Button(self.search_frame, text=idiomas["Español"]["Buscar"], command=self.buscar_archivo, bg='SystemButtonFace')
+        self.button.pack(side=tk.RIGHT)
+        # Crear un nuevo marco para los botones
         self.button_frame = tk.Frame(self.root)
-        self.button = tk.Button(self.button_frame, text=idiomas["Español"]["Buscar"], command=self.buscar_archivo, bg='SystemButtonFace')
-        self.button.pack(side=tk.LEFT)
         self.resize_button = tk.Button(self.button_frame, text=idiomas["Español"]["Redimensionar Imagen"], command=self.redimensionar_imagen, bg='SystemButtonFace')
         self.resize_button.pack(side=tk.LEFT)
         self.prev_button = tk.Button(self.button_frame, text=idiomas["Español"]["Anterior"], command=self.pagina_anterior, bg='SystemButtonFace')
@@ -97,8 +101,7 @@ class LectorManga:
         self.zoom_factor = 1.0
         self.current_image_index = 0
         self.scroll_factor = 0
-        
-
+    
         # Atajos de teclado
         self.root.bind("<Right>", lambda event: self.pagina_siguiente())
         self.root.bind("<Left>", lambda event: self.pagina_anterior())
