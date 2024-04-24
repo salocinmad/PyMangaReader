@@ -64,7 +64,7 @@ idiomas = {
 class LectorManga:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("PyManReader - Beta 0.3")
+        self.root.title("PyManReader - Beta 0.4")
         self.root.state('zoomed')  # Maximiza la ventana
         # Crear un nuevo marco para la etiqueta y el botón de búsqueda
         self.search_frame = tk.Frame(self.root)
