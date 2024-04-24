@@ -8,7 +8,7 @@ Accesos directos
  Flecha derecha - imagen siguiente\
  R - Redimensionar al tamaño actual de la ventana\
 
-· En la carpeta donde queiras guardar tu proyecto:
+· En la carpeta donde quieras guardar tu proyecto:
 ```bash
 git clone https://github.com/salocinmad/PyMangaReader
 ```
